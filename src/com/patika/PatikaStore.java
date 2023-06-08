@@ -1,13 +1,24 @@
 package com.patika;
 
+import java.util.Scanner;
+
 public class PatikaStore {
 
 
-    public static void main(String[] args) {
-        int s=0;
-        System.out.println("PatikaStore Product Management Panel");
+    public void menu(){
 
-        switch (s){
+        Scanner sc= new Scanner(System.in);
+
+        System.out.println("PatikaStore Product Management Menu");
+        System.out.println("1- Notebook Operations");
+        System.out.println("2- Smart Phone Operations");
+        System.out.println("3- ist Brands");
+        System.out.println("0- Exit");
+
+        System.out.print("Your choice: ");
+        int userChoice =sc.nextInt();
+
+        switch (userChoice){
 
             case 1:
                 System.out.println("Notebook Operations");
@@ -22,7 +33,7 @@ public class PatikaStore {
                 System.out.println("Exit");
                 break;
             default:
-                System.out.println("Did not select an option!!!");
+                System.out.println("Did not select a option!!!");
         }
     }
 }
