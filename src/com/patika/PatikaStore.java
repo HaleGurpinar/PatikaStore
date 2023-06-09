@@ -33,7 +33,8 @@ public class PatikaStore {
                 System.out.println("Exit");
                 break;
             default:
-                System.out.println("Did not select a option!!!");
+                System.out.println("Please enter a number from panel options!!!");
+                break;
         }
     }
 }
