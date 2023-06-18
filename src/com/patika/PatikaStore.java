@@ -9,6 +9,8 @@ public class PatikaStore {
 
         Scanner sc= new Scanner(System.in);
 
+
+
         System.out.println("PatikaStore Product Management Menu");
         System.out.println("1- Notebook Operations");
         System.out.println("2- Smart Phone Operations");
@@ -28,6 +30,10 @@ public class PatikaStore {
                 break;
             case 3:
                 System.out.println("List Brands");
+                System.out.println("------------");
+                Brand br=new Brand();
+                br.printBrands();
+
                 break;
             case 0:
                 System.out.println("Exit");
