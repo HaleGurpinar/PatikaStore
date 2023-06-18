@@ -12,7 +12,7 @@ public class PatikaStore {
         System.out.println("PatikaStore Product Management Menu");
         System.out.println("1- Notebook Operations");
         System.out.println("2- Smart Phone Operations");
-        System.out.println("3- ist Brands");
+        System.out.println("3- List Brands");
         System.out.println("0- Exit");
 
         System.out.print("Your choice: ");
