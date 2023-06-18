@@ -24,9 +24,11 @@ public class PatikaStore {
 
             case 1:
                 System.out.println("Notebook Operations");
+                System.out.println("----------------------------------------------------------------------");
                     break;
             case 2:
                 System.out.println("Smart Phone Operations");
+                System.out.println("----------------------------------------------------------------------");
                 break;
             case 3:
                 System.out.println("List Brands");
