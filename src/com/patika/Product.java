@@ -44,6 +44,55 @@ public class Product {
         this.color = color;
     }
 
+    public Product(int idPhone, int idNotebook, double price, double discountRate, int stock, String name, String brand, int memory, double screen, double battery, double ram) {
+        this.idPhone = idPhone;
+        this.idNotebook = idNotebook;
+        this.price = price;
+        this.discountRate = discountRate;
+        this.stock = stock;
+        this.name = name;
+        this.brand = brand;
+        this.memory = memory;
+        this.screen = screen;
+        this.battery = battery;
+        this.ram = ram;
+    }
+
+    public static void menu(int number){
+        if (number ==1){
+            System.out.println("Notebook");
+        }else {
+            System.out.println("Mobile Phone");
+        }
+
+        System.out.println(".......................");
+        System.out.println("1-List Items");
+        System.out.println("2-Add Items");
+        System.out.println("3-Delete Items");
+        System.out.println("4-Filter Items");
+        System.out.println("Make a choice");
+        int select=scanner.nextInt();
+
+        switch (select){
+            case 1:
+                listItems(number);
+                break;
+            case 2:
+                addItems(number);
+                break;
+            case 3:
+                deleteItems(number);
+                break;
+            case 4:
+                filterItems(number);
+                break;
+            default: {
+                System.out.println("There is no such an option. Please enter your choice again.");
+                menu(number);
+            }
+        }
+    }
+
     public String getProductName() {
         return productName;
     }
