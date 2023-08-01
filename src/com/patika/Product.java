@@ -78,13 +78,13 @@ public class Product {
                 listItems(number);
                 break;
             case 2:
-                addItems(number);
+                //addItems(number);
                 break;
             case 3:
-                deleteItems(number);
+                //deleteItems(number);
                 break;
             case 4:
-                filterItems(number);
+                //filterItems(number);
                 break;
             default: {
                 System.out.println("There is no such an option. Please enter your choice again.");
@@ -93,6 +93,62 @@ public class Product {
         }
     }
 
+    public static void listItems(int number) {
+        if (number % 2 != 0) {
+            // Notebook
+            System.out.println(
+                    "----------------------------------------------------------------------------------------------------------");
+            System.out.println(
+                    "| ID | Product Name                   | Price      | Brand      | Storage    | Screen Size  | RAM        |");
+            System.out.println(
+                    "----------------------------------------------------------------------------------------------------------");
+
+            ArrayList<Product> productList = products.get("Notebook");
+
+            if (!productList.isEmpty()) {
+                for (Product product : productList) {
+                    String productName = product.getName();
+                    product.setName(productName);
+
+                    System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s |\n",
+                            product.getId(), product.getName(), product.getPrice(), product.getName(),
+                            product.getMemory(), product.getScreen(), product.getRam());
+                }
+                System.out.println(
+                        "----------------------------------------------------------------------------------------------------------");
+            }
+            System.out.println();
+
+        } else {
+            // Mobile phone
+            System.out.println(
+                    "-------------------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println(
+                    "| ID | Product Name                   | Price      | Brand      | Storage    | Screen Size  | Camera     | Battery    | RAM        | COLOR      |");
+            System.out.println(
+                    "-------------------------------------------------------------------------------------------------------------------------------------------------");
+
+            ArrayList<Product> productList = products.get("MobilePhone");
+
+            if (!productList.isEmpty()) {
+                for (Product product : productList) {
+                    String productName = product.getName();
+                    product.setProductName(productName);
+
+                    System.out.printf(
+                            "| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s | %-10s | %-10s | %-10s |\n",
+                            product.getId(), product.getName(), product.getPrice(), product.getName(),
+                            product.getMemory(), product.getScreen(), product.getBattery(), product.getRam(),
+                            product.getColor());
+                }
+                System.out.println(
+                        "-------------------------------------------------------------------------------------------------------------------------------------------------");
+
+            }
+            System.out.println();
+
+        }
+    }
     public String getProductName() {
         return productName;
     }

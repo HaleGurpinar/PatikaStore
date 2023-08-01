@@ -1,12 +1,13 @@
 package com.patika;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Brand implements Comparable<Brand>{
 
-    private String name;
+    private String brandName;
     private  int id;
     private static String[] brands = new String[9];
     private static LinkedHashMap<String, Integer> nameId= new LinkedHashMap<>();
@@ -15,19 +16,19 @@ public class Brand implements Comparable<Brand>{
     @Override
     public int compareTo(Brand o) {
 
-        return getName().compareTo(o.getName());
+        return getBrandName().compareTo(brandName);
     }
 
     public Brand() {
     }
 
-    public Brand(int id, String name) {
+    public Brand(int id, String brandName) {
         this.id = id;
-        this.name = name;
+        this.brandName = brandName;
     }
 
-    public String getName() {
-        return name;
+    public String getBrandName() {
+        return brandName;
     }
 
     public int getId() {
@@ -36,12 +37,15 @@ public class Brand implements Comparable<Brand>{
 
 
 
-    public void printBrands(){
-        compare(brands);
-
-        for (String b: brands){
-            System.out.println("-" + brands);
+    public static void printBrands(){
+        System.out.println();
+        System.out.println("BRANDS");
+        System.out.println("----------------------------");
+        for (String brand : brands) {
+            System.out.println("- " + brand);
         }
+        System.out.println();
+
     }
 
     private static void compare(String[] brands) {
