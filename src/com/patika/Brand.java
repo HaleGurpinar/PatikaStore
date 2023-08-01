@@ -1,26 +1,29 @@
 package com.patika;
 
+import java.util.LinkedHashMap;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Brand implements Comparable<Brand>{
-    @Override
-    public int compareTo(Brand o) {
-        return getName().compareTo(o.getName());
-    }
 
     private String name;
     private  int id;
-    private static int count=1;
+    private static String[] brands = new String[9];
+    private static LinkedHashMap<String, Integer> nameId= new LinkedHashMap<>();
+    private  Product product;
 
-    public static Set<Brand> brand = new TreeSet<>();
+    @Override
+    public int compareTo(Brand o) {
+
+        return getName().compareTo(o.getName());
+    }
 
     public Brand() {
     }
 
-    public Brand(String name) {
+    public Brand(int id, String name) {
+        this.id = id;
         this.name = name;
-        this.id = count++;
     }
 
     public String getName() {
@@ -32,22 +35,36 @@ public class Brand implements Comparable<Brand>{
     }
 
 
-    static {
-        Brand.brand.add(new Brand("Samsung"));
-        Brand.brand.add(new Brand("Lenovo"));
-        Brand.brand.add(new Brand("Apple"));
-        Brand.brand.add(new Brand("Huawei"));
-        Brand.brand.add(new Brand("Casper"));
-        Brand.brand.add(new Brand("Asus"));
-        Brand.brand.add(new Brand("HP"));
-        Brand.brand.add(new Brand("Xiaomi"));
-        Brand.brand.add(new Brand("Monster"));
-
-    }
 
     public void printBrands(){
-        for (Brand b: brand){
-            System.out.println(b.getName());
+        compare(brands);
+
+        for (String b: brands){
+            System.out.println("-" + brands);
         }
+    }
+
+    private static void compare(String[] brands) {
+        for (int i = 0; i < brands.length; i++) {
+            String first = brands[i];
+            int index = i;
+            for (int j = i + 1; j < brands.length; j++) {
+                int result = first.compareTo(brands[j]);
+                if (result > 0) {
+                    first = brands[j];
+                    index = j;
+                }
+            }
+            String temp = brands[i];
+            brands[i] = first;
+            brands[index] = temp;
+
+        }
+    }
+
+    public static void addBrand(String brand, int index) {
+        brands[index] = brand;
+        nameId.put(brand, (index + 1));
+
     }
 }
