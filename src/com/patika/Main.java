@@ -103,14 +103,14 @@ public class Main {
     private static List<Telephone> addTelephone() {
         List<Telephone> telephones = new ArrayList<>();
 
-        telephones.add(new Telephone("SAMSUNG", "S20", 5000, 10, 45, 64, 15.6, 4500, 8, "Siyah"));
-        telephones.add(new Telephone("APPLE", "14", 5000, 10, 45, 64, 15.6, 4500, 8, "Pembe"));
-        telephones.add(new Telephone("XIAOMI", "Red Mi Note 11", 5000, 10, 45, 64, 15.6, 4500, 8, "Kırmızı"));
+        telephones.add(new Telephone("SAMSUNG", "S20", 5000, 10, 45, 64, 15.6, 4500, 8, "Black"));
+        telephones.add(new Telephone("APPLE", "14", 5000, 10, 45, 64, 15.6, 4500, 8, "Pink"));
+        telephones.add(new Telephone("XIAOMI", "Red Mi Note 11", 5000, 10, 45, 64, 15.6, 4500, 8, "Red"));
 
         return telephones;
     }
     private static void listedTelephone(List<Telephone> telephones){
-        System.out.format("%-5s %-8s %-25s %-14s %-10s %-10s %-10s %-10s\n", "|ID|", "|Marka|", "|Model|", "|Fiyat|", "|Hafıza|", "|Bellek|", "|Size|", "|Renk|");
+        System.out.format("%-5s %-8s %-25s %-14s %-10s %-10s %-10s %-10s\n", "|ID|", "|Brand|", "|Model|", "|Price|", "|Memory|", "|Capacity|", "|Size|", "|Color|");
         System.out.println("___________________________________________________________________________________________");
         for (Telephone t : telephones) {
             System.out.format(" %-4s %-10s %-23s %-15s %-10s %-10s %-10s %-10s\n", t.getId(), t.getBrand(), t.getDescription(), t.getUnitPrice() + " TL", t.getMemory() + " GB", t.getRam() + " GB", t.getSize()+"`", t.getColor());
@@ -127,7 +127,7 @@ public class Main {
     }
 
     private static void listedNotebook(List<Notebook> notebooks){
-        System.out.format("%-5s %-8s %-22s %-11s %-10s %-10s %-10s\n", "|ID|", "|Marka|", "|Model|", "|Fiyat|", "|Hafıza|", "|Bellek|", "|Size|");
+        System.out.format("%-5s %-8s %-22s %-11s %-10s %-10s %-10s\n", "|ID|", "|Brand|", "|Model|", "|Price|", "|Memory|", "|Capacity|", "|Size|");
         System.out.println("______________________________________________________________________________________________");
         for (Notebook n : notebooks) {
             System.out.format(" %-4s %-8s %-21s %-13s %-10s %-10s %-10s\n", n.getId(), n.getBrand(), n.getDescription(), n.getUnitPrice() + " TL", n.getMemory() + " GB", n.getRam() + " GB", n.getSize() + "`");
