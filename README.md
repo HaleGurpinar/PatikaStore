@@ -18,6 +18,8 @@ Patika team decided to open a virtual store where electronic goods are sold and 
 
 - Brands: Samsung, Lenovo, Apple, Huawei, Casper, Asus, HP, Xiaomi, Monster
 
+   ![Uploading image.png…](https://github.com/HaleGurpinar/PatikaStore/blob/master/Sc2.png)
+
 - Currently, 2 types of product groups are planned to be sold in the store: Mobile Phones, Notebooks.
 
 - Later, different product groups should be added.
@@ -66,14 +68,18 @@ Patika team decided to open a virtual store where electronic goods are sold and 
 
 - Screen Size (14 inches)
 
+   ![Uploading image.png…](https://github.com/HaleGurpinar/PatikaStore/blob/master/Sc3.png)
+   ![Uploading image.png…](https://github.com/HaleGurpinar/PatikaStore/blob/master/Sc4.png)
+
 The user should be able to list the products in the relevant category (Notebooks, Mobile Phones, etc.) through the system.
 
 When listing products, they should be displayed on the console screen in tabular form (System.out.format() can be used).
 
 The user should be able to add a product and select the product's group (Mobile Phone, Notebook, etc.).
 
+ ![Uploading image.png…](https://github.com/HaleGurpinar/PatikaStore/blob/master/Sc5.png)
+
 User should be able to delete products by their unique number.
 
-User should be able to filter and list products by unique numbers and brands.
-
+ ![Uploading image.png…](https://github.com/HaleGurpinar/PatikaStore/blob/master/Sc6.png)
 
