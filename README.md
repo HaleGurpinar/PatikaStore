@@ -3,6 +3,8 @@
 Patika team decided to open a virtual store where electronic goods are sold and adds that this store will make the product management system from you, the trail volunteers.
 
 - The name of the Virtual Store will be "PatikaStore".
+  ![Uploading image.png…]()
+
 
 - Brands will be created in the store and products will be matched with these brands.
 
